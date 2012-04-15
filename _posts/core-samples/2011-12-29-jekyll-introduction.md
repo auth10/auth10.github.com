@@ -1,6 +1,7 @@
 ---
 layout: post
 category : lessons
+author: magoo
 tags : [intro, beginner, jekyll, tutorial]
 ---
 {% include JB/setup %}
