@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 
+title: Auth10 Blog
 ---
 {% include JB/setup %}
 
