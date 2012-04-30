@@ -14,6 +14,7 @@ Your company has 20+ apps (web, desktop, web services), 100+ of users (some are 
 ####Auth10
 [__Auth10__](http://auth10.com) hides all this complexity and provides a higher abstraction layer on top of the core building blocks of claims based identity. It allows you quickly define and __configure__ your __applications__, the __users__ of those applications regardless of who they are and how they prove their identity; and finally connect both with a __policy__ that defines what they can do. And because __Auth10__ has an end to end knowledge of all components involved, it can easily pinpoint issues, helping you __troubleshoot__ in minutes what before took long hours of trial and errors.
 
+<!-- end preview -->
 
 ###Dashboard
 The Dashboard gives you a consolidated view of all your applications and users within your organization and your partners. In one view you can easily identify who can access what and if there are any problems:
