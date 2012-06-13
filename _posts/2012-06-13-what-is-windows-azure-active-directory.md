@@ -94,4 +94,4 @@ Then you make plain HTTP calls that will return JSON.
 
 ### How is this all related to [Auth10](http://auth10.com)?
 
-[Auth10](http://auth10.com)'s mission is to help companies connect easily and securely applications in the cloud, on-premises and mobile with its employees, customers, partners and users. The industry has changed and is trending towards a federated standards-based identity as the most elegant and secure way to solve this challenge. Windows Azure Active Directory is a testament of that. However, there is a need for simplification and best practices and that's where [Auth10](http://auth10.com) can help.
+[Auth10](http://auth10.com)’s mission is to help companies easliy and securely connect applications in the cloud, on-premises and mobile with its employees, customers, partners and users. The industry has changed and is trending towards a federated, standards-based identity as the most elegant, robust and secure way to solve this challenge. Windows Azure Active Directory is a testament to that. However, there is still a need for simplification and best practices, and that’s where [Auth10](http://auth10.com) helps.
