@@ -37,29 +37,26 @@ Protocols that Microsoft will keep investing on: WS-Fed, SAMLP, OAuth2, OpenID C
 
 For the big companies: AD is a projection of your on-premise AD (without the password hashes). 
 
-> comment: I can imagine a people picker for SharePoint wired to use Windows Azure AD Graph API
+> comment: I can imagine a people picker for SharePoint wired to use Windows Azure AD Graph API.
 
 For the small companies: used as your main directory supporting built-in federation with Office365 suite and in the future with other (custom or third party) cloud apps.
 
-> comment: this makes sense, but I would argue that currently Google Apps is better positioned to be the identity provider for small companies (don't have adoption numbers, just perception). The good news is that if they both supports the protocols (WS-Fed, SAMLP, OpenID connect who knows what), then it doesn't really matter which one ends up being.
+> comment: this makes sense, but I would argue that currently Google Apps is better positioned to be the identity provider for small companies (don't have adoption numbers, just perception). The good news is that if they both support the protocols (WS-Fed, SAMLP, OpenID connect who knows what), then it doesn't really matter which one ends up being.
 
 ### What scenarios they are targeting for developers?
 
-Use Windows Azure AD to augment adoption of your web app by accepting identities from Windows Azure AD.
+Use Windows Azure AD to increase adoption of your web app by accepting identities from Windows Azure AD.
 
 Use Windows Azure AD (together with social idps) as the identity system/hub.
 
-> comment: similar to what ACS provides today but adding the capability of authenticating also with your or others cloud AD. Your website with "login with Facebook", "login with Windows Live"... "login with Windows Azure AD". For apps that live within Microsoft boundaries (marketplace, etc) this will make sense.
+> comment: similar to what ACS provides today but adding the capability of authenticating also with your or others cloud AD. Your website with "login with Facebook", "login with Windows Live"... "login with Windows Azure AD". For apps that live within Microsoft boundaries (Marketplace, etc) this will make sense.
 
 ### What is in the preview?
 
-Access to the REST graph API (directory.windows.net is the base url).
-
-No production SLA.
-
-It's a completely separate namespace from ACS (although if you notice the URLs in the demo, it's a special ACS instance accounts.accesscontrol.windows.net).
-
-Integrating with Windows Azure Active Directory for Web Authentication will be done through the usual WS-Fed for now and there will be samples in different platforms (PHP, Java, NET).
+* Access to the REST graph API (directory.windows.net is the base url).
+* No production SLA.
+* It's a completely separate namespace from ACS (although if you notice the URLs in the demo, it's a special ACS instance accounts.accesscontrol.windows.net).
+* Integrating with Windows Azure Active Directory for Web Authentication will be done through the usual WS-Fed for now and there will be samples in different platforms (PHP, Java, NET).
 
 ### How do you add trust relationships to Windows Azure Active Directory?
 
@@ -94,4 +91,4 @@ Then you make plain HTTP calls that will return JSON.
 
 ### How is this all related to [Auth10](http://auth10.com)?
 
-[Auth10](http://auth10.com)’s mission is to help companies easliy and securely connect applications in the cloud, on-premises and mobile with its employees, customers, partners and users. The industry has changed and is trending towards a federated, standards-based identity as the most elegant, robust and secure way to solve this challenge. Windows Azure Active Directory is a testament to that. However, there is still a need for simplification and best practices, and that’s where [Auth10](http://auth10.com) helps.
+[Auth10](http://auth10.com)’s mission is to help companies easily and securely connect applications in the cloud, on-premises and mobile with its employees, customers, partners and users. The industry has changed and is trending towards a federated, standards-based identity as the most elegant, robust and secure way to solve this challenge. Windows Azure Active Directory is a testament to that. However, there is still a need for simplification and best practices, and that’s where [Auth10](http://auth10.com) helps.
