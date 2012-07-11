@@ -8,6 +8,7 @@ title: Auth10 Blog
 <div class="posts">
   {% for post in site.posts %}
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div style="display:none">{{ post.content | preview | debug }}</div>
     {{ post.content | preview }}
     <a href="{{ post.url }}">Read More</a>
     <hr/>
