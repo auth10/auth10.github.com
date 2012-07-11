@@ -21,6 +21,8 @@ Windows Azure Active Directory is or will be:
 
 Your investments in federation, claims based identity and standard-based protocols will pay off :)
 
+<!-- end preview -->
+
 ## Notes
 
 ### General direction

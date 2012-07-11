@@ -10,6 +10,8 @@ description: Configuring SharePoint 2010 to accept Google and ADFS identities th
 
 In this article we will walk through the process of configuring a SharePoint 2010 application to use claims-based federated identity. This is one of the scenarios that we've heard a lot from customers. If you ever did this manually you probably spent at least a week trying to figuring out all the details. So many steps (some of them rather obscure) lead often to errors and a lot of time troubleshooting them. Our goal with Auth10 is to get that down to minutes, instead of days or weeks.
 
+<!-- end preview -->
+
 At a high level, these are the steps that we will follow.
 
 * Configure trust between SharePoint and Windows Azure Active Directory (previously known as Windows Azure Access Control Service). 

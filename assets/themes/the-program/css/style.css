@@ -111,8 +111,8 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
+  border-top: 2px solid #ccc;
+  margin: 3em 0;
   padding: 0;
 }
 ins {
@@ -1508,3 +1508,6 @@ hr {
 .tclose:hover {background-position:0 -30px}
 #frameless {padding:0}
 #frameless .tclose {left:6px}
+
+.readmore {font-size:1.2em; font-weight: bold;}
+
