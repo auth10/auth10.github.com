@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Simpler WIF integration for ASP.NET web application using cloud friendly appSettings
+title: Simpler WIF integration for ASP.NET web application using NuGet and cloud friendly appSettings
 author: Matias Woloski
 tags : [auth10, identity, adfs, acs, sharepoint, claims, federation, jabbr]
 keywords: identity, windows azure active directory, wif, aspnet
-description: Use a simpler mechanism to integrate ASP.NET applications using appSettings
+description: Use a simpler mechanism to integrate ASP.NET applications with WIF using cloud friendly appSettings and NuGet
 ---
 {% include JB/setup %}
 
