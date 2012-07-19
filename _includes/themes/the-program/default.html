@@ -72,6 +72,10 @@
   <script type="text/javascript">
 		$(document).ready(function() {
 			$(".entry-content").find('img').each(function() {
+				// if parent is link don't show modal
+				if ($(this).parent().get(0).tagName == "A")
+					return;
+				
 				var imgSrc = this.src;
 				$(this).css('width', '100%');
 				$(this).on('mouseover', function() { 
