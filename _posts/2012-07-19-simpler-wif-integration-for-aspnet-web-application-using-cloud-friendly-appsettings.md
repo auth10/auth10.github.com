@@ -10,7 +10,12 @@ description: Use a simpler mechanism to integrate ASP.NET applications using app
 
 Last week we've spent some time contributing to [Jabbr](https://github.com/davidfowl/JabbR) (the open source chat app based on SignalR). [David Fowler](https://twitter.com/davidfowl), the main dev behind the project, expressed on twitter that it would be great to have enterprise sign-on support on [Jabbr](https://github.com/davidfowl/JabbR) so that it could be used as a chat system on the enterprise. 
 
-Being a [single page application](http://en.wikipedia.org/wiki/Single-page_application), we thought it would be a good idea to integrate it with [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/en-us/security/aa570351.aspx), learn a couple of things to make this scenario much simpler and bring that back to [Auth10](http://auth10.com) while also contributing to [Jabbr](https://github.com/davidfowl/JabbR). We went ahead and forked the [Jabbr repo](https://github.com/davidfowl/JabbR) and within a couple of hours we had it working and a [pull request](https://github.com/davidfowl/JabbR/pull/525).
+Being a [single page application](http://en.wikipedia.org/wiki/Single-page_application), we thought it would be a good idea to integrate it with [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/en-us/security/aa570351.aspx), learn a couple of things to make this scenario much simpler and bring that back to [Auth10](http://auth10.com) while also contributing to [Jabbr](https://github.com/davidfowl/JabbR). We went ahead and forked the [Jabbr repo](https://github.com/davidfowl/JabbR) and within a couple of hours we had it working and a [pull request](https://github.com/davidfowl/JabbR/pull/525) was on its way.
+
+We hosted a version of Jabbr using WIF in AppHarbor if you are curious about it 
+<http://jabbr-auth10.apphb.com/>
+
+<a href="http://jabbr-auth10.apphb.com/" title="Jabbr with enterprise signle sign on using WIF in AppHarbor" target="_blank"><img src="http://puu.sh/JSUJ" /></a>
 
 We extracted what we learnt from this experience and packaged it into a couple of NuGets: [Auth10.AspNet.SimpleConfig](http://nuget.org/packages/Auth10.AspNet.SimpleConfig) and [Auth10.AspNet.SimpleConfig.WindowsAzureAD.IdentitySelector](http://nuget.org/packages/Auth10.AspNet.SimpleConfig.WindowsAzureAD.IdentitySelector). 
 
@@ -23,13 +28,13 @@ We extracted what we learnt from this experience and packaged it into a couple o
 ### What we've learnt from Jabbr
 
 * There is a single page with the page structure and the rest is in JavaScript.
-* Jabbr stores configuration items on appSettings to be cloud-friendly. Clouds like Windows Azure Web Sites or AppHarbor allows you to override config from appSetting but you can't change complex config sections.
+* Jabbr stores configuration items on appSettings to be cloud-friendly. Clouds like [Windows Azure Web Sites](https://www.windowsazure.com/en-us/home/scenarios/web-sites/) or [AppHarbor](https://appharbor.com/) allows you to override config from appSetting but you can't change complex config sections.
 * Jabbr has its own mechanism to track a user logged in, they don't use IPrincipal.
 * Jabbr has two authentication mechanism: user and password or social identity providers (via JanRain)
 * Once the user is logged in it will use SignalR in a trusted subsystem (i.e. trusting the cookie set on login)
 * The Jabbr code is very clean and well structured!
 
-In this scenario we need non-intrusive, easy to integrate and minimum footprint code so that we don't break things and adapt to whatever structure the application already have.
+In this scenario we needed non-intrusive, easy to integrate and minimum footprint code so that we don't break things and adapt to whatever structure the application already have.
 
 ### Less complexity, less footprint, less intrusive
 
@@ -54,7 +59,7 @@ WIF SDK provides the **Add STS reference** wizard, we provide an equivalent to t
 			-realm urn...ample-app 
 			-serviceNamespace auth10-preview
 
-That will write the values of the above `<appSettings>`. We also provide a more generic CmdLet: `Set-FederationParametersFromFederationMetadataUrl` and `Set-FederationParametersFromFederationMetadataFile`
+That CmdLet will read the FederationMetadata and will fill the values of the configuration settings. We also provide a more generic CmdLet: `Set-FederationParametersFromFederationMetadataUrl` and `Set-FederationParametersFromFederationMetadataFile`
 
 The NuGet will also inject a slightly customized version of the WIF modules using App_Start WebActivator (or if it's NET 3.5 the NuGet will add them under `<httpModules>`).
 
